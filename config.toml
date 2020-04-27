@@ -1,7 +1,7 @@
 baseURL = "https://www.minwt.com.tw/"
 languageCode = "zh-TW"
 title = "Blogpaper"
-theme = "minwtshop2.0"
+theme = "Blogpaper"
 paginate = 8
 
 [taxonomies]
