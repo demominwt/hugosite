@@ -1,0 +1,43 @@
+{{ $title := lower .Title}}{{ $desc := ""}}{{ range $key, $value := .Site.Params.categories }}{{ if eq $key $title }}{{ $desc = $value }}{{ end }}{{ end }}
+<div id="wrap">
+	<div class="mwt-container">
+		<div id="product">
+			<div class="mwt-row">
+				<section class="mwt-col-12 art-section">
+					<h1>
+					{{- $h1 := index $desc 0}}
+					{{- if not (eq $h1 nil)}}
+						{{- $h1}}
+					{{- else}}
+						{{- .Title}}
+				{{- end}}
+				</h1>
+{{- .Content}}
+			</section>
+				{{ $paginator := .Paginate (where .Pages "Type" "post") }}
+					{{ range $paginator.Pages }}
+					<section class="mwt-col-md-3 mwt-col-sm-6 mwt-col-12">
+						<div class="post">
+								<a href="{{ .Permalink }}" title="{{ .Title }}">
+									<div class="mwt-row-b">
+            				<div class="mwt-col-sm-12 mwt-col-4">
+									 		<img src="{{.Params.img}}">
+										</div>
+            			<div class="mwt-col-sm-12 mwt-col-8">
+										<h2>{{ .Params.catTitle | safeHTML }}</h2>
+									</div>
+								</div>
+								</a>
+							<product barcode="{{ .Params.codenum}}">
+						</div>
+					</section>
+					 {{ end }}
+					<div class="mwt-col-12">
+						<div class="page-nav">
+						  {{ partial "pagination.html" . }}
+						</div>
+					</div>
+				</div>
+		</div>
+	</div><!-- container-->
+</div><!-- wrap-->
