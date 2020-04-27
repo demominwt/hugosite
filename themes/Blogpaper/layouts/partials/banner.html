@@ -3,9 +3,6 @@
 
   {{/* Get 'banner' from front matter, complete with default values */}}
   {{- $banner := dict "src" "" "caption" "" "href" "" "alt" (print "Header banner of '" .Page.Name "'") -}}
-  {{- if .Page.Params.banner -}}
-    {{- $banner = merge $banner .Page.Params.banner -}}
-  {{- end -}}
 
   {{/* Should the banner link to the page? */}}
   {{ $page_href := .page_href | default false }}
