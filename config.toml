@@ -1,3 +1,17 @@
+baseURL = "https://www.minwt.com.tw/"
 languageCode = "zh-TW"
-title = "梅問題購物"
+title = "Blogpaper"
 theme = "minwtshop2.0"
+paginate = 8
+
+[taxonomies]
+	tag = "tags"
+	category = "categories"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[params]
+  description = "梅問題購物中，嚴選各款商品，同時每樣產品是經由梅干實用後，才推薦給大家，同時不只單賣產品，還更懂產品，敬請大家安心選購！"
