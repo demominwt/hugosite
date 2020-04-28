@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+</head>
+<body>
+	pages
+	<hr>
+	{{with .Params.txt}}
+     <product barcode="{{ .| }}">
+	{{end}} 
+
+<hr>
+  <h1>{{ .Title }}</h1>
+	{{with .Params.subtitle}}
+     <h2> {{ .| }}</h2>
+	{{end}} 
+  {{ .Content }}
+</body>
+</html>

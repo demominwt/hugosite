@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  {{ range .Data.Pages }}
+    <h1>tag:<a href={{ .Permalink }}>{{ .Title }}</a></h1>
+  {{ end }}
+
+<hr>
+  {{ $paginator := .Paginate (where .Pages "Type" "post") }}
+  {{ range $paginator.Pages }}
+     {{ .Title }}<br>
+  {{ end }}
+  {{ partial "pagination.html" . }}
+<hr>
+</body>
+</html>
