@@ -11,17 +11,17 @@ sections:
   match: "*"
 - type: directory
   path: content/portfolio
-  label: Portfolio
+  label: 作品
   create: all
   match: "**/*"
 - type: directory
   path: content/contact
-  label: Contact
+  label: 聯啟我
   create: all
   match: "**/*"
 - type: directory
   path: content/about
-  label: About
+  label: 關於
   create: all
   match: "**/*"
 upload_dir: static/uploads
