@@ -1,4 +1,4 @@
-baseURL = "http://libs.mwt.tw/"
+baseURL = "/"
 languageCode = "zh-TW"
 title = "Creative portfolio"
 theme = "portfolio-theme"
