@@ -17,5 +17,3 @@ fields:
 - type: number
   name: weight
   label: weight
-pages:
-- content/portfolio/這是用forestry建立的.html
