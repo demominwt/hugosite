@@ -1,0 +1,6 @@
+[submodule "themes/Blogpape"]
+	path = themes/Blogpape
+	url = https://github.com/NormandErwan/Blogpaper
+[submodule "themes/Blogpaper"]
+	path = themes/Blogpaper
+	url = https://github.com/NormandErwan/Blogpaper
